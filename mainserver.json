@@ -1,0 +1,11 @@
+#!/bin/bash # Script to move topics from old shared hosting to new lighttpd vps server # U="http://forum.cyberciti.biz/viewtopic.php?t=" rdu="" for n in $(seq 1 521) do rdu="$(lynx --dump $U$n | egrep "vt([0-9]+)\.html$" | awk '{ print $2}' | uniq)" if [ "$rdu" == "" ]; then : else echo "$n => \"$rdu\"," fi rdu="" donesed -n '10000,20000p' TheOriginalFile > TheNewFile
+countdown() ( IFS=: set -- $* secs=$(( ${1#0} * 3600 + ${2#0} * 60 + ${3#0} )) while [ $secs -gt 0 ] do sleep 1 & printf "\r%02d:%02d:%02d" $((secs/3600)) $(( (secs/60)%60)) $((secs%60)) secs=$(( $secs - 1 )) wait done echo )
+FROM=$1 TO=$2 ACTION="$3" if [ "$ACTION" == "+" ]; then while [ $FROM -le $TO ] do echo -n $FROM " " (( FROM++ )) done echo "" else while [ $FROM -ge $TO ] do echo -n $FROM " " (( FROM-- )) done echo " " fi
+FROM=$1 TO=$2 ACTION="$3" if [ "$ACTION" == "+" ]; then while [ $FROM -le $TO ] do echo -n $FROM " " (( FROM++ )) done echo "" else while [ $FROM -ge $TO ] do echo -n $FROM " " (( FROM-- )) done echo " " fi
+countdown() ( IFS=: set -- $* secs=$(( ${1#0} * 3600 + ${2#0} * 60 + ${3#0} )) while [ $secs -gt 0 ] do sleep 1 & printf "\r%02d:%02d:%02d" $((secs/3600)) $(( (secs/60)%60)) $((secs%60)) secs=$(( $secs - 1 )) wait done echo )
+countdown() ( IFS=: set -- $* secs=$(( ${1#0} * 3600 + ${2#0} * 60 + ${3#0} )) while [ $secs -gt 0 ] do sleep 1 & printf "\r%02d:%02d:%02d" $((secs/3600)) $(( (secs/60)%60)) $((secs%60)) secs=$(( $secs - 1 )) wait done echo )
+echo "for (i = $start; i <= $stop; i+=1) i" | bc -l | xargs printf "%0${width}d\n" 
+
+width=4 start=1 stop=9999 seq -f "%0${width}g" "$start" "$stop" 0001 0002 0003 0004 ... 9997 9998 9999
+awk -v w="$width" -v start="$start" -v stop="$stop" 'BEGIN{ for(i=start;i<=stop;i++) printf("%0*d\n", w, i)}' 
+seq 100000 | paste -sd+ | bc -l 5000050000

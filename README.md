@@ -29,7 +29,7 @@ pkg install git
 pkg install python
 git clone https://github.com/Kamanati/FF-UID-HACK
 cd FF-UID-HACK
-bash ffhack.sh 
+bash ffhack.sh -h 
 ```
 ### usage
 

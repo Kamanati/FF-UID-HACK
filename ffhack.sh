@@ -40,6 +40,7 @@ else
 	echo ""
         echo -e $r "Plz Stay Connected To Internet"
 	echo ""
+        exit
 fi
 }
 

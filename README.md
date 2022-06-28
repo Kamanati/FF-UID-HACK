@@ -31,6 +31,9 @@ git clone https://github.com/Kamanati/FF-UID-HACK
 cd FF-UID-HACK
 bash ffhack.sh 
 ```
+### usage
+
+`ffhack.sh -u [UID] -f [force level]`force level will work upto 4 only and the main server connection command is `ffhack.sh -u xxxxxxxx -f [xx] -s [server name](default All server)`
 
 ### Find Me on :
 

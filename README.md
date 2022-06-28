@@ -35,6 +35,14 @@ bash ffhack.sh -h
 
 `ffhack.sh -u [UID] -f [force level]`force level will work upto 4 only and the main server connection command is `ffhack.sh -u xxxxxxxx -f [xx] -s [server name](default All server)`
 
+** Features **
+```
+1. Brute Force attack enabled
+2. Force Acctack enabled
+3. Connection To Free Fire Server available 
+4. Game Decode And inject a Hacked account in to The Free Fire Apk 
+5. Make Game smooth 
+```
 ### Find Me on :
 
 <p align="left">
